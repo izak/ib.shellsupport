@@ -27,3 +27,7 @@ def sh(command, stdin=None, stdout=None, stderr=None):
             stdout.close()
     if p.returncode != 0:
         raise CommandFailed(p.returncode)
+
+def backtick(command):
+    return subprocess.Popen(shlex.split(command),
+        stdout=subprocess.PIPE).stdout.read()
