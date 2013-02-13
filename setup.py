@@ -23,8 +23,4 @@ setup(
     install_requires=[
         'setuptools',
     ],
-    entry_points="""
-        [console_scripts]
-        smtpd = ib.shellsupport:main
-    """,
     )
